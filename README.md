@@ -10,7 +10,6 @@
   .catch((err) => {  
     console.log("Failed to sync db: " + err.message);  
   });  
-  
   после можно их убрать  
 
 3. запустить бэк  
