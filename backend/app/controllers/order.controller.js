@@ -34,18 +34,9 @@ exports.create = (req, res) => {
 };
 
 // Retrieve all Order from the database.
-exports.findAll = (req, res) => {
-  const isAll = !!req.query.all;
+exports.findAllAdmin = (req, res) => {
 
-  const search = isAll
-    ? undefined
-    : {
-        where: {
-          user_id: req.userId,
-        },
-      };
-
-  Order.findAll(search)
+  Order.findAll()
     .then((data) => {
       res.send(data);
     })
@@ -55,6 +46,30 @@ exports.findAll = (req, res) => {
       });
     });
 };
+
+// Retrieve all Order from the database.
+exports.findAll = (req, res) => {
+  const isAll = !!req.query.all;
+
+  const search = isAll
+      ? undefined
+      : {
+        where: {
+          user_id: req.userId,
+        },
+      };
+
+  Order.findAll(search)
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message: err.message || "Some error occurred while retrieving Orders.",
+        });
+      });
+};
+
 
 // Find a single Order with an id
 exports.findOne = (req, res) => {

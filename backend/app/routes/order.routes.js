@@ -1,3 +1,5 @@
+const authJwt = require("../middleware/authJwt");
+const controller = require("../controllers/order.controller");
 module.exports = (app) => {
   const controller = require("../controllers/order.controller.js");
   const authJwt = require("../middleware/authJwt");
@@ -7,8 +9,11 @@ module.exports = (app) => {
   // Create a new Order
   router.post("/", [authJwt.verifyToken], controller.create);
 
-  // Retrieve all Orders
+  // Retrieve all Orders (one user)
   router.get("/", [authJwt.verifyToken], controller.findAll);
+
+  // Retrieve all Orders (all users)
+  router.get("/all", [authJwt.verifyToken, authJwt.isAdmin], controller.findAllAdmin);
 
   // Retrieve a single Order with id
   router.get("/:id", [authJwt.verifyToken], controller.findOne);
