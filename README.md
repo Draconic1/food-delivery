@@ -1,35 +1,21 @@
-1. создать пользователя бд  
-  имя arina  
-  пароль 1234   
-  localhost  
-  authentication type: Standard !!!!
-
-2. выполнить в воркбенче:  
+1. дропнуть БД в воркбенче и создать заново  
+  DROP DATABASE food;  
   CREATE DATABASE food;  
   GRANT ALL PRIVILEGES ON food.* TO arina@'localhost';  
 
-3. перенос проекта:  
-  git init  
-  git clone https://github.com/Draconic1/arinalab.git  
-  npm i  
+2. для пересоздания БД должны быть строки в server.js  
+  db.sequelize  
+  .sync({ <b>force: true</b>})  
+  .then(() => {  
+    console.log("Drop and re-sync db.");  
+    <b>initial()</b>;  
+  })  
+  .catch((err) => {  
+    console.log("Failed to sync db: " + err.message);  
+  });  
+    
+  после можно их убрать  
 
-4. запустить бэк  
-  запустить в воркбенче arina.sql  
- 
-5. после первого запуска бэка в файле server.js (бэк)  изменить строки:  
-  30 строка: .sync({ force: true}) изменить на  .sync({ })    (убрать force: true)  
-  удалить 33 строку  initial();
-
-______________________________
-
-1. админка:  
-  cd backend  
-  cd npm run mysql-admin  
-  http://127.0.0.1:8082/  
-  admin  
-  QQqq33  
-
-2. пользователь админ на фронтенде:  
-  http://localhost:3000/  
-  лог: admin  
-  пароль: admin  
+3. запустить бэк  
+4. заполнить данные из файла arina.sql  
+5. запустить фронтенд  
