@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
@@ -16,6 +16,7 @@ import {
   deleteOrder,
   updateOrder,
 } from "./reducerSlice";
+import {Modal} from "react-bootstrap";
 
 const Component = () => {
   const apiBase = useSelector((state) => state.toolkit.apiBase);
@@ -23,7 +24,15 @@ const Component = () => {
   const food_type = useSelector((state) => state.toolkit.food_type);
   const orders = useSelector((state) => state.toolkit.orders);
   const orderStatuses = useSelector((state) => state.toolkit.orderStatuses);
+  const [address, setAddress] = useState("");
   const dispatch = useDispatch();
+
+  const [userCard, setUserCard] = useState("");
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+  };
 
   useEffect(() => {
     axios.get(`${apiBase}/orders`, { headers: authHeader() }).then((resp) => {
@@ -52,6 +61,8 @@ const Component = () => {
         dispatch(deleteOrder(id));
       });
   };
+
+
   const payCart = () => {
     const ordersInCart = orders.filter((x) => x.status === 1);
 
@@ -60,10 +71,13 @@ const Component = () => {
       const tmp = { ...oic };
       tmp.status = 2;
       tmp.paid_date = Date.now();
+      tmp.address = address;
+      tmp.card = userCard;
       axios
         .put(`${apiBase}/orders/${id}`, tmp, { headers: authHeader() })
         .then((resp) => {
           dispatch(updateOrder(tmp));
+          handleClose();
         });
     }
   };
@@ -135,10 +149,42 @@ const Component = () => {
         )}
 
       <Form.Group className="mb-3">
-        <Button variant="warning" onClick={payCart}>
-          Оплатить заказ
+        <Button variant="primary" onClick={() => handleShow()}>
+          Оформить заказ
         </Button>
       </Form.Group>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Оформить заказ</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form.Label>Адрес доставки</Form.Label>
+          <Form.Control
+              type="text"
+              name="address"
+              placeholder="Введите адрес"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+          />
+          <Form.Label>Номер карты</Form.Label>
+          <Form.Control
+              type="number"
+              name="card"
+              placeholder="Введите номер карты"
+              value={userCard}
+              onChange={(e) => setUserCard(e.target.value)}
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={payCart}>
+            Оплатить
+          </Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Закрыть
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

@@ -19,6 +19,8 @@ exports.create = (req, res) => {
     user_id: req.userId,
     paid_date: req.paid_date,
     get_date: req.get_date,
+    address: req.address,
+    card: req.card,
   };
 
   // Save Order in the database

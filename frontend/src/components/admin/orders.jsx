@@ -228,7 +228,9 @@ const Component = () => {
               <th>ID</th>
               <th>Статус</th>
               <th>ID Блюда</th>
-              <th>Пользоватль</th>
+              <th>Пользователь</th>
+              <th>Адрес</th>
+              <th>Карта</th>
               <th>Создан</th>
               <th>Оплачен</th>
               <th>Доставлен</th>
@@ -251,6 +253,18 @@ const Component = () => {
                       {users &&
                         users.find((y) => +y.id === +x.user_id)?.username}
                     </td>
+                    {x.address == null &&
+                        <td>-</td>
+                    }
+                    {x.address != null &&
+                        <td>{x.address}</td>
+                    }
+                    {x.card == null &&
+                        <td>-</td>
+                    }
+                    {x.card != null &&
+                        <td>{x.card}</td>
+                    }
                     <td>{moment(x.createdAt).format("DD-MM-YYYY hh:mm:ss")}</td>
                     {x.paid_date == null &&
                         <td>-</td>
@@ -279,6 +293,9 @@ const Component = () => {
               })}
             {!filteredOrders.length && (
               <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>

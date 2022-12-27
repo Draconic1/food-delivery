@@ -19,6 +19,14 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER,
       references: sequelize.users,
     },
+    address:{
+      type: Sequelize.STRING,
+      defaultValue: null,
+    },
+    card: {
+      type: Sequelize.INTEGER,
+      defaultValue: null,
+    },
   });
 
   Model.statusEnum = [

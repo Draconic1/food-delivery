@@ -27,9 +27,10 @@ function initial() {
 }
 
 db.sequelize
-  .sync({ })
+  .sync({force:true })
   .then(() => {
     console.log("Drop and re-sync db.");
+    initial();
 
   })
   .catch((err) => {
