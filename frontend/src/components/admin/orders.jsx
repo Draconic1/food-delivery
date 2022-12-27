@@ -58,7 +58,7 @@ const Component = () => {
 
   useEffect(() => {
     axios
-      .get(`${apiBase}/orders?all=1`, { headers: authHeader() })
+      .get(`${apiBase}/orders/allorders`, { headers: authHeader() })
       .then((resp) => {
         dispatch(setOrders(resp.data));
         setFilterStatus("");

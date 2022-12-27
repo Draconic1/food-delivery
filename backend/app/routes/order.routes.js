@@ -13,7 +13,7 @@ module.exports = (app) => {
   router.get("/", [authJwt.verifyToken], controller.findAll);
 
   // Retrieve all Orders (all users)
-  router.get("/all", [authJwt.verifyToken, authJwt.isAdmin], controller.findAllAdmin);
+  router.get("/allorders", [authJwt.verifyToken, authJwt.isAdmin], controller.findAllAdmin);
 
   // Retrieve a single Order with id
   router.get("/:id", [authJwt.verifyToken], controller.findOne);
