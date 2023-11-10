@@ -1,5 +1,5 @@
 
-<img src="./img/foodpage.jpg" alt="Скриншот страницы"> 
+<img src="./img/foodpage.jpg" alt="Скриншот страницы" style-"height: 80%; width: 80%;"> 
 ![Скриншот стартовой страницы](https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg)
 
 
