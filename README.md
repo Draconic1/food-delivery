@@ -1,5 +1,5 @@
 
-<img src=”https://raw.githubusercontent.com/Draconic1/food-delivery/main/img/foodpage.jpg” alt="Скриншот страницы"> 
+<img src=”./img/foodpage.jpg” alt="Скриншот страницы"> 
 ![Image](https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg) 
 
 Запуск приложения:  
