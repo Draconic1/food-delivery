@@ -1,5 +1,5 @@
 
-<img src=”img/foodpage.jpg” />
+<img src=”food-delivery/img/foodpage.jpg”>
 
 Запуск приложения:  
 1. cd frontend
