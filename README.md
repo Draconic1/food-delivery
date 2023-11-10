@@ -1,5 +1,5 @@
 
-<img src=”https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg”>  
+<img src=”https://raw.githubusercontent.com/Draconic1/food-delivery/main/img/foodpage.jpg”> 
 [Image alt](./img/foodpage.jpg) 
 
 Запуск приложения:  
