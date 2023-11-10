@@ -1,6 +1,6 @@
 
 <img src=”https://raw.githubusercontent.com/Draconic1/food-delivery/main/img/foodpage.jpg”> 
-[Image alt](https://raw.githubusercontent.com/Draconic1/food-delivery/main/img/foodpage.jpg) 
+![Image](https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg) 
 
 Запуск приложения:  
 1. cd frontend
