@@ -1,4 +1,5 @@
-
+#Веб приложение доставки из столовой
+  
 <img src="https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg" alt="Скриншот стартовой страницы" height="80%" width="80%"> 
   
 <img src="https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg" alt="Скриншот страницы с выбором меню" height="80%" width="80%"> 
@@ -18,7 +19,7 @@
 **Администратор:** имеет возможность редактирования меню и добавления нового, просмотра заказов пользователя и изменения их статуса, фильтрации заказов по статусу, дате и пользователю.  
 
 
-**Запуск приложения:**    
+#Запуск приложения    
 1. cd frontend
    npm start
 2. cd backend
