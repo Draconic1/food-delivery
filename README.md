@@ -1,6 +1,14 @@
 
-<img src="https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg" alt="Скриншот страницы" height="80%" width="80%"> 
-![Скриншот стартовой страницы](https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg)
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg" alt="Скриншот стартовой страницы" height="80%" width="80%"> 
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg" alt="Скриншот страницы с выбором меню" height="80%" width="80%"> 
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/search.png" alt="Поиск" height="80%" width="80%"> 
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/cart.png" alt="Корзина" height="80%" width="80%"> 
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/admin.png" alt="Интерфейс администратора" height="80%" width="80%"> 
+<img src="https://github.com/Draconic1/food-delivery/blob/main/img/cart.png" alt="Изменение статуса доставки" height="80%" width="80%"> 
+ 
+Гость: имеет возможность зарегистрироваться и авторизоваться, просмотреть главную страницу с категориями блюд и доступное меню.  
+Авторизованный пользователь: имеет дополненный функционал гостя с возможностью добавлять заказы в корзину, отменять или оплачивать их, а так же просматривать свои заказы.  
+Администратор: имеет возможность редактирования меню и добавления нового, просмотра заказов пользователя и изменения их статуса, фильтрации заказов по статусу, дате и пользователю.  
 
 
 Запуск приложения:  
