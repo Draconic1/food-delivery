@@ -20,10 +20,10 @@
 
 
 # Запуск приложения    
-1. cd frontend
+1. cd frontend  
    npm start
    
-3. cd backend
+3. cd backend  
    npm start
 
 4. для запуска админки бэкенда:  
