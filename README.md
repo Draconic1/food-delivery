@@ -1,6 +1,6 @@
 
 <img src=”./img/foodpage.jpg” alt="Скриншот страницы"> 
-![Иллюстрация к проекту]("https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg")
+![Иллюстрация к проекту](https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg)
 
 
 Запуск приложения:  
