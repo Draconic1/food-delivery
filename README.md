@@ -1,9 +1,25 @@
-1. дропнуть БД в воркбенче и создать заново  
-  DROP DATABASE food;  
-  CREATE DATABASE food;  
-  GRANT ALL PRIVILEGES ON food.* TO arina@'localhost';  
 
-2. для пересоздания БД должны быть строки в server.js  
+<img src=”img/название файла с расширением”>
+
+Запуск приложения:  
+1. cd frontend
+   npm start
+2. cd backend
+   npm start
+  
+Запуск админки бэкенда:  
+ cd backend  
+ cd npm run mysql-admin  
+ http://127.0.0.1:8082/  
+ admin  
+ QQqq33  
+
+
+3. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql  
+  CREATE DATABASE food;  
+  GRANT ALL PRIVILEGES ON food.* TO user@'localhost';  
+
+4. Для пересоздания БД при старте должны быть строки в server.js  
   db.sequelize  
   .sync({ <b>force: true</b>})  
   .then(() => {  
@@ -12,10 +28,6 @@
   })  
   .catch((err) => {  
     console.log("Failed to sync db: " + err.message);  
-  });  
+  });   
     
-  после можно их убрать  
-
-3. запустить бэк  
-4. заполнить данные из файла arina.sql  
-5. запустить фронтенд  
+  Для отключения перезапуска force:true и initial() стоит убрать.  
