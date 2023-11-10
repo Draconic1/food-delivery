@@ -1,6 +1,6 @@
 
 <img src=”./img/foodpage.jpg” alt="Скриншот страницы"> 
-![Иллюстрация к проекту](https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg)
+![Иллюстрация к проекту](https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg)
 
 
 Запуск приложения:  
