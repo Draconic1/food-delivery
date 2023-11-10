@@ -1,7 +1,9 @@
 
 <img src="./img/foodpage.jpg" alt="Скриншот страницы"> 
-![Иллюстрация к проекту](https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg)
+![Иллюстрация к проекту]("https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg")
 
+[![](https://github.com/enjoy-digital/litex/workflows/ci/badge.svg)](https://github.com/enjoy-digital/litex/actions)
+![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)
 
 Запуск приложения:  
 1. cd frontend
