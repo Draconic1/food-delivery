@@ -25,21 +25,26 @@
    npm start
    ``` 
    
-3. `cd backend `   
-   `npm start`  
-
-4. для запуска админки бэкенда:  
-   `cd backend `   
-   `cd npm run mysql-admin`  
+3. ```
+   cd backend    
+   npm start  
+  ```
+5. для запуска админки бэкенда:  
+   ```
+    cd backend    
+   cd npm run mysql-admin
+   ```
    http://127.0.0.1:8082/
    Логин: admin
    Пароль: QQqq33
    
-5. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql  
-  `CREATE DATABASE food; `   
-  `GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; `   
+6. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql  
+  ```
+  CREATE DATABASE food;    
+  GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
+  ```
 
-6. Для пересоздания БД при старте должны быть строки в server.js  
+7. Для пересоздания БД при старте должны быть строки в server.js  
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
