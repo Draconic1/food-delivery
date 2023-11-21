@@ -23,15 +23,18 @@
 1. ```
    cd frontend   
    npm start
-   ``` 
-   
+   ```
+
+       
 2. ```
    cd backend    
    npm start  
   ```
 
+  
 # Запуск админки на бэкенде
-        
+
+     
 ```
  cd backend    
  cd npm run mysql-admin 
@@ -41,15 +44,19 @@
    Логин: admin
    Пароль: QQqq33
 
-         
+     
 6. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql
-        
-  ```CREATE DATABASE food;    
-  GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; ```
-         
-# Для пересоздания БД при старте должны быть строки в server.js
+
+  
+  ```
+  CREATE DATABASE food;    
+  GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
+  ```
 
         
+# Для пересоздания БД при старте должны быть строки в server.js
+
+    
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
@@ -61,5 +68,6 @@
     console.log("Failed to sync db: " + err.message);    
   });
 ```
+
   
   Для отключения перезапуска force:true и initial() стоит убрать. 
