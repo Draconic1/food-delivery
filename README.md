@@ -1,5 +1,13 @@
 # Веб приложение доставки из столовой
-  
+
+  Данное приложение представляет собой онлайн-сервис доставки продуктов из стловой, где пользователь может просмотреть меню и добавить понравившиеся позиции в корзину, после чего оплатить.    
+  Администратор принимает заказы и назначает доставку пользователю, а также может редактировать меню.  
+    
+  Стек технологий:
+  Frontend: React, Redux-tookit, axios
+  Backend: Node.js + Express  
+  Database: MySQL  
+    
 <img src="https://github.com/Draconic1/food-delivery/blob/main/img/startpage.jpg" alt="Скриншот стартовой страницы" height="80%" width="80%"> 
   
 <img src="https://github.com/Draconic1/food-delivery/blob/main/img/foodpage.jpg" alt="Скриншот страницы с выбором меню" height="80%" width="80%"> 
