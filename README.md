@@ -28,18 +28,18 @@
        
 2. ```console
    cd backend    
-   npm start  
-  ```
-
-    
+   npm start
+   ```
+ 
+   # Запуск админки    
 ```console
   cd backend    
   cd npm run mysql-admin 
 ```
 
-   http://127.0.0.1:8082/
-   Логин: admin
-   Пароль: QQqq33
+   http://127.0.0.1:8082/  
+   Логин: admin  
+   Пароль: QQqq33  
 
   
   ```sql
@@ -47,7 +47,7 @@
   GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
   ```
 
-    
+ # Пересоздание БД в коде:       
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
