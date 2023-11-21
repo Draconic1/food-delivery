@@ -20,19 +20,19 @@
 
 
 # Запуск приложения    
-1. ```
+1. ```console
    cd frontend   
    npm start
    ```
 
        
-2. ```
+2. ```console
    cd backend    
    npm start  
   ```
 
   
-  ```
+  ```console
   cd backend    
   cd npm run mysql-admin 
   ```
@@ -42,7 +42,7 @@
    Пароль: QQqq33
 
   
-  ```
+  ```sql
   CREATE DATABASE food;    
   GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
   ```
