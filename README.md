@@ -44,12 +44,12 @@
          
 6. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql
         
-  ```
-  CREATE DATABASE food;    
-  GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
-  ```
+  ```CREATE DATABASE food;    
+  GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; ```
          
-# Для пересоздания БД при старте должны быть строки в server.js  
+# Для пересоздания БД при старте должны быть строки в server.js
+
+        
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
