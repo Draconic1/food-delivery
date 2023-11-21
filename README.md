@@ -20,8 +20,10 @@
 
 
 # Запуск приложения    
-1. `cd frontend  `  
- `  npm start`  
+1. ```
+   cd frontend   
+   npm start
+   ``` 
    
 3. `cd backend `   
    `npm start`  
