@@ -47,8 +47,6 @@
   GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
   ```
 
-        
-
     
   ```javascript
   db.sequelize    
