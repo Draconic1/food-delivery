@@ -31,9 +31,10 @@
   ```
 5. для запуска админки бэкенда:  
    ```
-    cd backend    
-   cd npm run mysql-admin
+  cd backend    
+  cd npm run mysql-admin
    ```
+
    http://127.0.0.1:8082/
    Логин: admin
    Пароль: QQqq33
