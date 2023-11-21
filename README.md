@@ -31,7 +31,7 @@
    npm start
    ```
  
-   ### Запуск админки    
+ ### Запуск админки    
 ```console
   cd backend    
   cd npm run mysql-admin 
