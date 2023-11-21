@@ -31,7 +31,7 @@
    npm start
    ```
  
-   # Запуск админки    
+   ## Запуск админки    
 ```console
   cd backend    
   cd npm run mysql-admin 
@@ -47,7 +47,7 @@
   GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
   ```
 
- # Пересоздание БД в коде:       
+ ## Пересоздание БД в коде:       
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
