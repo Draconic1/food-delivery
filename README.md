@@ -30,7 +30,7 @@
    npm start  
   ```
 
-3. запуск админки на бэкенде
+# Запуск админки на бэкенде
         
 ```
  cd backend    
@@ -49,7 +49,7 @@
   GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; 
   ```
          
-7. Для пересоздания БД при старте должны быть строки в server.js  
+# Для пересоздания БД при старте должны быть строки в server.js  
   ```javascript
   db.sequelize    
   .sync({ <b>force: true</b>})   
