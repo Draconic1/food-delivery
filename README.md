@@ -38,14 +38,15 @@
   `GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; `   
 
 6. Для пересоздания БД при старте должны быть строки в server.js  
-  `db.sequelize`    
-  `.sync({ <b>force: true</b>}) `   
-  `.then(() => {  `  
-   ` console.log("Drop and re-sync db.");  `  
-  `  <b>initial()</b>; `   
-  `})`    
-  `.catch((err) => {  `  
-    `console.log("Failed to sync db: " + err.message);`    
-  `});`     
+  ```javascript
+  db.sequelize    
+  .sync({ <b>force: true</b>})   
+  .then(() => {    
+    console.log("Drop and re-sync db.");    
+    <b>initial()</b>;    
+  })    
+  .catch((err) => {    
+    console.log("Failed to sync db: " + err.message);    
+  }); ```    
     
   Для отключения перезапуска force:true и initial() стоит убрать.  
