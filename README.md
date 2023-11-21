@@ -20,32 +20,32 @@
 
 
 # Запуск приложения    
-1. cd frontend  
-   npm start
+1. `cd frontend  `  
+ `  npm start`  
    
-3. cd backend  
-   npm start
+3. `cd backend `   
+   `npm start`  
 
 4. для запуска админки бэкенда:  
-   cd backend  
-   cd npm run mysql-admin
+   `cd backend `   
+   `cd npm run mysql-admin`  
    http://127.0.0.1:8082/
    Логин: admin
    Пароль: QQqq33
    
 5. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql  
-  CREATE DATABASE food;  
-  GRANT ALL PRIVILEGES ON food.* TO user@'localhost';  
+  `CREATE DATABASE food; `   
+  `GRANT ALL PRIVILEGES ON food.* TO user@'localhost'; `   
 
 6. Для пересоздания БД при старте должны быть строки в server.js  
-  db.sequelize  
-  .sync({ <b>force: true</b>})  
-  .then(() => {  
-    console.log("Drop and re-sync db.");  
-    <b>initial()</b>;  
-  })  
-  .catch((err) => {  
-    console.log("Failed to sync db: " + err.message);  
-  });   
+  `db.sequelize`    
+  `.sync({ <b>force: true</b>}) `   
+  `.then(() => {  `  
+   ` console.log("Drop and re-sync db.");  `  
+  `  <b>initial()</b>; `   
+  `})`    
+  `.catch((err) => {  `  
+    `console.log("Failed to sync db: " + err.message);`    
+  `});`     
     
   Для отключения перезапуска force:true и initial() стоит убрать.  
