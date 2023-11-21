@@ -47,6 +47,6 @@
   })    
   .catch((err) => {    
     console.log("Failed to sync db: " + err.message);    
-  }); ```    
-    
-  Для отключения перезапуска force:true и initial() стоит убрать.  
+  }); ```
+  
+  Для отключения перезапуска force:true и initial() стоит убрать. 
