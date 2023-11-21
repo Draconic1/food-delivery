@@ -29,16 +29,18 @@
    cd backend    
    npm start  
   ```
-5. для запуска админки бэкенда:  
+  
+5. для запуска админки бэкенда:
+  
    ```
   cd backend    
   cd npm run mysql-admin
    ```
-
+  
    http://127.0.0.1:8082/
    Логин: admin
    Пароль: QQqq33
-   
+     
 6. После запуска бэкенда создать базу данных и заполнить ее данными из файла food.sql  
   ```
   CREATE DATABASE food;    
